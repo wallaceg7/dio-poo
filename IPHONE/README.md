@@ -1,18 +1,30 @@
-## Getting Started
+## Diagrama MERMAID
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+```mermaid
+classDiagram
+Iphone --> Musica
+Iphone --> Telefone
+Iphone --> Internet
 
-## Folder Structure
+class Iphone["<< interface >> Iphone"]
+class Musica["<< interface >> Musica"]
+class Telefone["<< interface >> Telefone"]
+class Internet["<< interface >> Internet"]
 
-The workspace contains two folders by default, where:
+Musica : +reproduzir()
+Musica : +tocar()
+Musica: +pausar()
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Telefone: +ligar()
+Telefone: +Atender()
+Telefone: +EncerrarChamada()
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Internet: +exibirPagina()
+Internet: +addNovaAba()
+Internet: +atualizarAba()
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Musica --> IPod
+Telefone --> TelefoneIphone
+Internet --> NavegadorIphone
+  
+```
